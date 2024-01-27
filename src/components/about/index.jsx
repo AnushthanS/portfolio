@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import MaskText from './MaskText';
+import Divider from '@/utils/Divider';
 
 function Index() {
 
   return (
-
-    <section className='py-8'>
-      <MaskText />  
+    <section className='relative'>
+      <MaskText />
+      <Divider />
     </section>
-
   )
 }
 

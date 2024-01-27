@@ -7,12 +7,11 @@ function Divider() {
 
     useEffect(() => {
         setPath(progress);
-    }, []);
+    }, [progress]);
 
     const setPath = (progress) => {
-        const { innderWidth } = window;
-        const width = innerWidth;
-        path.current.setAttributeNS("", "d", `M0 50 Q${width/2} ${50 + progress}, ${width} 50`);
+        const { innerWidth } = window;
+        path.current.setAttributeNS("", "d", `M0 50 Q${innerWidth/2} ${50 + progress}, ${innerWidth} 50`);
     }
 
     const handleMouseEnter = () => {
