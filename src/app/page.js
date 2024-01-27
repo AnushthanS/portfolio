@@ -1,16 +1,19 @@
 'use client';
-import { useLayoutEffect } from "react";
 import Hero from "@/components/hero";
 import About from "@/components/about";
 import Nav from "@/components/navbar";
+import { useEffect } from "react";
 
 export default function Home() {
-  useLayoutEffect(() => {
-    async () => {
+  useEffect(() => {
+    const initLocomotiveScroll = async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotive = new LocomotiveScroll();
+      new LocomotiveScroll();
     };
-  });
+
+    initLocomotiveScroll();
+  }, []);
+
   return (
     <section className="relative">
       <div className='absolute top-0 z-30 w-[100vw]'>
