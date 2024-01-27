@@ -7,7 +7,7 @@ function Divider() {
 
     useEffect(() => {
         setPath(progress);
-    }, [progress]);
+    });
 
     const setPath = (progress) => {
         const { innerWidth } = window;
@@ -47,10 +47,10 @@ function Divider() {
     };
 
   return (
-        <div className="h-[1px] w-[100vw] mx-auto relative my-[20px]">
+        <div className="h-[1px] w-[100vw] mx-auto relative my-[20px] border border-red-300">
             <div onMouseEnter={handleMouseEnter} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className="h-[40px] relative top-[-20px] z-10" />
             <svg className="absolute w-full h-[100px] top-[-50px]">
-                <path ref={path} className="stroke-white stroke-1" fill="transparent"></path>
+                <path ref={path} className="stroke-1" fill="transparent" style={{ stroke: 'white' }}></path>
             </svg>
         </div>
   )

@@ -11,7 +11,7 @@ const playfair = Playfair_Display({subsets: ["latin"]});
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${playfair.className}, bg-color3 relative`}>
+      <body className={`${playfair.className}, bg-color3 m-0 p-0`}>
         {children}
         </body>
     </html>

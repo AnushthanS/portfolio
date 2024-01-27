@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import MaskText from './MaskText';
 import Divider from '@/utils/Divider';
 
