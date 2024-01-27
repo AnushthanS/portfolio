@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <section className="relative">
-      <div className='absolute top-0 z-30 w-[100vw]'>
+      <div className='absolute top-0 z-40 w-[100vw]'>
         <Nav />
       </div>
       <Hero />
