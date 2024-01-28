@@ -3,7 +3,6 @@ import Hero from "@/components/hero";
 import About from "@/components/about";
 import Nav from "@/components/navbar";
 import { useEffect } from "react";
-import Divider from "@/utils/Divider";
 
 export default function Home() {
   useEffect(() => {

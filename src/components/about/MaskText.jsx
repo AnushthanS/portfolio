@@ -21,23 +21,23 @@ function MaskText() {
     let [isHovered, setIsHovered] = useState(false);
     let elementRef = useRef(null);
     let { x, y, elementRef: sectionRef } = UseMousePosition(elementRef);
-    let size = isHovered ? 400 : 0;
+    let size = isHovered ? 300 : 0;
 
     return (
         <section
             ref={sectionRef}
-            className='w-full h-[60vh] relative'
+            className='w-full h-[50vh] relative'
             onMouseLeave={() => size=0}
         >
             <motion.div
-                className='absolute text-color3 w-full h-[60vh] text-3xl  md:text-5xl lg:text-6xl bg-color5 flex justify-center items-center'
+                className='absolute text-color3 w-full h-[50vh] text-3xl  md:text-5xl lg:text-6xl bg-color5 flex justify-center items-center'
                 style={{
                     maskImage: "url('/mask.svg')",
                     maskRepeat: "no-repeat",
                     maskSize: `${size}px`,
                 }}
                 animate={{
-                    WebkitMaskPosition: `${x - (size / 2)}px ${y - (size / 2 + 180)}px`,
+                    WebkitMaskPosition: `${x - (size / 2)}px ${y - (size / 2 + 400)}px`,
                     WebkitMaskSize: `${size}px`,
                 }}
                 transition={{ type: 'tween', ease: 'backOut', duration: 0.5 }}
@@ -47,7 +47,7 @@ function MaskText() {
                 </p>
             </motion.div>
 
-            <div className='text-white w-full h-[60vh] py-10 text-3xl md:text-5xl lg:text-6xl flex justify-center items-center'>
+            <div className='text-white w-full h-[50vh] py-7 text-3xl md:text-5xl lg:text-6xl flex justify-center items-center'>
                 <p className='px-[30px]'>
                     I&apos;m a third-year student at IIIT Sri City, passionate about creative development and design. I love to create things that live on the internet, building products that fulfill my artistic endeavors along the way.
                 </p>
