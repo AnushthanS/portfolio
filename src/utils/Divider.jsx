@@ -49,12 +49,12 @@ function Divider() {
     };
 
   return (
-        <div className="h-[1px] w-[100vw] my-[20px] relative">
+        <div className="h-[1px] w-[100vw] relative">
 
-            <div onMouseEnter={() => handleMouseEnter()} onMouseMove={(e) => handleMouseMove(e)} onMouseLeave={() => handleMouseLeave()} className="h-[40px] relative border border-red-800 top-[10px]"></div>
+            <div onMouseEnter={() => handleMouseEnter()} onMouseMove={(e) => handleMouseMove(e)} onMouseLeave={() => handleMouseLeave()} className="h-[40px] relative z-10"></div>
 
-            <svg className="absolute top-[-20px] w-full h-[100px]">
-                <path ref={path} className="stroke-1" fill="transparent" style={{ stroke: 'white' }}>
+            <svg className="absolute w-full h-[100px]">
+                <path ref={path} fill="transparent" style={{ stroke: 'white', strokeWidth: 1 }}>
                 </path>
             </svg>
         </div>

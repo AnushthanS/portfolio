@@ -2,6 +2,8 @@
 import Hero from "@/components/hero";
 import About from "@/components/about";
 import Nav from "@/components/navbar";
+import Reveal from "@/utils/Reveal";
+import Divider from "@/utils/Divider";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -16,11 +18,14 @@ export default function Home() {
 
   return (
     <section className="relative">
-      <div className='absolute top-0 z-40 w-[100vw]'>
+      {/* <div className='absolute z-40 w-[100vw]'>
         <Nav />
       </div>
       <Hero />
-      <About />
+      <Reveal>
+        <About />
+      </Reveal> */}
+      <Divider />
     </section>
   );
 }

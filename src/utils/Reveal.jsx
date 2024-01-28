@@ -6,11 +6,9 @@ function Reveal({children, width}) {
     const ref = useRef(null);
     const isInview = useInView(ref, {once: true});
     const mainControls = useAnimation();
-    const slideControls = useAnimation();
     useEffect(() => {
         if(isInview){
             mainControls.start("visible");
-            slideControls.start("visible");
         }
     }, [isInview]);
 
@@ -33,27 +31,11 @@ function Reveal({children, width}) {
         transition={{
             duration: 0.75,
             ease: "easeInOut",
-            delay: 1
+            delay: 0.5
         }}
         >
             {children}
         </motion.div>
-
-        <motion.div
-        variants={{
-            hidden:{
-                left: "0"
-            },
-            visible:{
-                left: "100%"
-            }
-        }}
-
-        initial="hidden"
-        animate={slideControls}
-        transition={{ duration: 1, ease: "easeIn" }}
-        className="absolute top-4 bottom-4 left-0 right-0 bg-color2 z-40"
-        ></motion.div>
     </div>
   )
 }
