@@ -5,9 +5,9 @@ import Divider from '@/utils/Divider';
 function Index() {
 
   return (
-    <section className='relative'>
+    <section>
       <MaskText />
-      <Divider />
+      {/* <Divider /> */}
     </section>
   )
 }

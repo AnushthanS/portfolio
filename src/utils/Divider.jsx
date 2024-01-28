@@ -11,7 +11,8 @@ function Divider() {
 
     const setPath = (progress) => {
         const { innerWidth } = window;
-        path.current.setAttributeNS("", "d", `M0 50 Q${innerWidth/2} ${50 + progress}, ${innerWidth} 50`);
+        const width = innerWidth;
+        path.current.setAttributeNS("", "d", `M0 50 Q${width/2} ${50 + progress}, ${width} 50`);
     }
 
     const handleMouseEnter = () => {
@@ -37,8 +38,9 @@ function Divider() {
         setPath(newProgress);
         progress = lerp(progress, 0, 0.025);
 
-        if(Math.abs(progress) > 0.75) reqId = window.requestAnimationFrame(animateOut);
-        else resetAnimation();
+        if(Math.abs(progress) > 0.75) {
+            reqId = window.requestAnimationFrame(animateOut);
+        } else resetAnimation();
     };
 
     const resetAnimation = () => {
@@ -47,10 +49,13 @@ function Divider() {
     };
 
   return (
-        <div className="h-[1px] w-[100vw] mx-auto relative my-[20px] border border-red-300">
-            <div onMouseEnter={handleMouseEnter} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className="h-[40px] relative top-[-20px] z-10" />
-            <svg className="absolute w-full h-[100px] top-[-50px]">
-                <path ref={path} className="stroke-1" fill="transparent" style={{ stroke: 'white' }}></path>
+        <div className="h-[1px] w-[100vw] my-[20px] relative">
+
+            <div onMouseEnter={() => handleMouseEnter()} onMouseMove={(e) => handleMouseMove(e)} onMouseLeave={() => handleMouseLeave()} className="h-[40px] relative border border-red-800 top-[10px]"></div>
+
+            <svg className="absolute top-[-20px] w-full h-[100px]">
+                <path ref={path} className="stroke-1" fill="transparent" style={{ stroke: 'white' }}>
+                </path>
             </svg>
         </div>
   )
