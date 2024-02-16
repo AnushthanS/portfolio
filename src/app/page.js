@@ -18,14 +18,14 @@ export default function Home() {
 
   return (
     <section className="relative">
-      {/* <div className='absolute z-40 w-[100vw]'>
+      <div className='absolute z-40 w-[100vw]'>
         <Nav />
       </div>
       <Hero />
       <Reveal>
         <About />
-      </Reveal> */}
-      <Divider />
+      </Reveal>
+      {/* <Divider /> */}
     </section>
   );
 }
