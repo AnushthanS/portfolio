@@ -1,8 +1,8 @@
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
-import { cn } from "@/lib/utils";
 import emailjs from '@emailjs/browser';
 import { useRef } from "react";
+import { cn } from '@/lib/utils';
+import { Input } from '../ui/input';
+import { Button } from '../ui/button';
 
 import {
     IconBrandTwitter,
@@ -36,34 +36,41 @@ export default function Content() {
 
     return (
         <section className="py-10 px-2">
-            <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 mb-40">
+            <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 mb-20">
                 Reach out!
             </h1>
 
             <div className="max-w-xl w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-slate-600 bg-zinc-950">
                 <h3 className="font-bold text-2xl text-neutral-200">Send me an email</h3>
-                <p>Don&apos;t worry I check my mails</p>
-            </div>
+            
 
 
             <form ref={form} onSubmit={sendEmail} className="my-8">
+                <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
+                    <LabelInputContainer className='rounded-xl'>
+                        <label htmlFor="firstname">First name</label>
+                        <Input id="firstname" placeholder="Jane" type="text" />
+                    </LabelInputContainer>
+                    <LabelInputContainer>
+                        <label htmlFor="lastname">Last name</label>
+                        <Input id="lastname" placeholder="Doe" type="text" />
+                    </LabelInputContainer>
+                </div>
+                <LabelInputContainer className="mb-4">
+                    <label htmlFor="email">Email Address</label>
+                    <Input id="email" placeholder="example@mail.com" type="email" />
+                </LabelInputContainer>
 
+                <div className='w-full flex justify-center items-center mt-10 mb-2'>
+                    <Button type='submit'>Send</Button>
+                </div>
             </form>
+        </div>
         </section>
     );
 }
 
-
-const BottomGradient = () => {
-    return (
-      <>
-        <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
-        <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
-      </>
-    );
-  };
-  
-  const LabelInputContainer = ({
+const LabelInputContainer = ({
     children,
     className,
   }: {
