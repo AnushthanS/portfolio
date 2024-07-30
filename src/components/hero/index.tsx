@@ -37,7 +37,7 @@ export default function Hero() {
                         </div>
 
                         <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
-                            <TypeAnimation sequence={sequence} repeat={2} />
+                            <TypeAnimation sequence={sequence} repeat={Infinity} />
                         </div>
 
                         <div className='w-[35px] h-[64px] mt-[80px] z-30 rounded-3xl border-4 border-white flex justify-center items-start p-2 hover:cursor-pointer'

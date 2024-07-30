@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss"
-const {default: flattenColorPalette} = require('tailwindcss/lib/util/flattenColorPalette')
+const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette')
 
 const config = {
   darkMode: ["class"],
@@ -8,7 +8,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -75,17 +75,28 @@ const config = {
           to: {
             backgroundPosition: "350% 50%, 350% 50%"
           }
-        }
+        },
+        spotlight: {
+          "0%": {
+            transform: "translate(-72%, -62%) scale(0.5)",
+            opacity: '0',
+          },
+          "100%": {
+            transform: "translate(-50%,-40%) scale(1)",
+            opacity: '1',
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "aurora": "aurora 60s linear infinite"
+        "aurora": "aurora 60s linear infinite",
+        "spotlight": "spotlight 2s ease .75s 1 forward"
       },
     },
   },
   plugins: [require("tailwindcss-animate"),
-     addVariablesForColors,],
+    addVariablesForColors,],
 } satisfies Config
 
 function addVariablesForColors({ addBase, theme }: any) {
