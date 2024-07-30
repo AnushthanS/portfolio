@@ -8,6 +8,7 @@ export default function Hero() {
     const sequence = [
         'DevOps Engineer', 1500,
         'Full Stack Developer', 1500,
+        'Systems Engineer', 1500,
         'Guitarist', 1500,
         'Movie Nerd', 1500
     ]

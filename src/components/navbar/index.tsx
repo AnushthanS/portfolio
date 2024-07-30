@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
+import { LinkPreview } from '../ui/link-preview';
 
 export default function Nav() {
     return (
@@ -18,12 +19,14 @@ export default function Nav() {
                 </div>
 
                 <div className="flex justify-between gap-8">
-                    <a href="https://linkedin.com/in/anushthan-saxena" target="_blank">
+                    <LinkPreview url="https://www.linkedin.com/in/anushthan-saxena">
                         <Image src={'/linkedin.svg'} alt="linked-in" width={32} height={32} className="brightness-90 hover:brightness-100" />
-                    </a>
-                    <a href="https://github.com/AnushthanS" target="_blank">
+                    </LinkPreview>
+
+                    <LinkPreview url='https://github.com/AnushthanS'>
                         <Image src={'/github.svg'} alt="github" width={32} height={32} className="brightness-90 hover:brightness-100" />
-                    </a>
+                    </LinkPreview>
+
                 </div>
             </section>
 
