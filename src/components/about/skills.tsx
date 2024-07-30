@@ -1,9 +1,13 @@
 import { WavyBackground } from "../ui/wavy-background";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const skills = "Java, MERN stack, NextJS, TailwindCSS, Docker, Kubernetes, Jenkins, Git, GitHub, SQL/NoSQL databases, Shell Scripting, Spring Boot, Framer Motion, Flutter, Cloud (AWS, Google Cloud), Redux, Monitoring, Debugging, UI/UX Design, Python, Site Reliability Engineering, Instrumentation, Terraform, Incident Response, Automation, Metrics Collection, Logging, Performance Monitoring";
 
 export default function Skills() {
+    const ref = useRef(null);
+    const isInView = useInView(ref);
     return (
         <section className="px-0 relative">
             <WavyBackground className="max-w-4xl mx-auto pb-40">
@@ -14,8 +18,11 @@ export default function Skills() {
                     most cloud, full stack and devops technologies.
                 </p>
             </WavyBackground>
-            <div className="w-[75%] mx-auto border-[1px] border-zinc-600 py-4 px-20 rounded-xl mb-20">
-                <TextGenerateEffect words={skills} />
+            <div
+                ref={ref}
+                className="w-[75%] mx-auto border-[1px] border-zinc-600 py-4 px-20 rounded-xl mb-20"
+            >
+                {isInView && <TextGenerateEffect words={skills} />}
             </div>
         </section>
     );
