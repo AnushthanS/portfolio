@@ -9,7 +9,9 @@ export default function Home() {
   return (
     <section className='relative bg-zinc-900'>
       <header className="dark" id='hero'>
-        <CurveLoader children={<Hero />} />
+        <CurveLoader>
+          <Hero />
+        </CurveLoader>
       </header>
 
       <main className='px-0'>
