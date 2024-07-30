@@ -12,7 +12,7 @@ export function CanvasRevealEffectImplemented() {
                 <Card title={
                     <div className="text-center">
                         <h2 className="font-thin">10th</h2>
-                        <span className="font-bold">St. George&apos;'s College <p className="font-extralight">ICSE</p></span>
+                        <span className="font-bold">St. George&apos;s College <p className="font-extralight">ICSE</p></span>
                         <p className="font-thin">93.8%</p>
                     </div>
                 }
