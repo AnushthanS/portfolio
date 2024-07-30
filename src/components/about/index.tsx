@@ -1,15 +1,16 @@
-import ShootingStars from "@/components/ui/shooting-stars";
-import { StarsBackground } from "@/components/ui/stars-background";
+import Hero from "./hero";
+import Education from "./education";
+import { CanvasRevealEffectImplemented } from "./edu-reveal";
 
 export default function About(){
   return(
-    <main className="h-[40rem] rounded-md bg-zinc-900 flex flex-col items-center justify-center relative w-full">
-      <h2 className="relative flex-col z-10 text-5xl md:text-7xl md:leading-tight max-w-5xl mx-auto text-center  font-medium bg-clip-text text-transparent bg-gradient-to-b from-zinc-800 via-white to-white flex items-center gap-2 md:gap-8">
-        <span className="tracking-tight">Hey there!</span>
-        <span className="text-white text-2xl font-thin">I&apos;m Anushthan, a Computer Science Engineer and tech enthusiast, having completed my Bachelors from Indian Institute of Information Technology, Sri City</span>
-      </h2>
-      <ShootingStars />
-      <StarsBackground />
-    </main>
+    <section>
+      <Hero />
+      <div className="block w-full h-[1px] bg-zinc-600" />
+      <Education />
+      <CanvasRevealEffectImplemented />
+      <div className="block w-full h-[1px] bg-zinc-600" />
+
+    </section>
   );
 }
