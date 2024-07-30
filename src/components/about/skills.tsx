@@ -14,7 +14,7 @@ export default function Skills() {
                     most cloud, full stack and devops technologies.
                 </p>
             </WavyBackground>
-            <div className="w-[75%] mx-auto border-[1px] border-zinc-600 py-4 px-20 rounded-xl">
+            <div className="w-[75%] mx-auto border-[1px] border-zinc-600 py-4 px-20 rounded-xl mb-20">
                 <TextGenerateEffect words={skills} />
             </div>
         </section>

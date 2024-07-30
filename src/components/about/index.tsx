@@ -12,6 +12,7 @@ export default function About() {
       <CanvasRevealEffectImplemented />
       <div className="block w-full h-[1px] bg-zinc-600" />
       <Skills />
+      <div className="block w-full h-[1px] bg-zinc-600" />
     </section>
   );
 }
