@@ -7,7 +7,7 @@ export default function Nav() {
         <main>
             <section className="h-[50px] text-white flex justify-between py-3 px-4 w-[98vw] mx-auto">
                 <div className="text-2xl md:text-3xl font-thin brightness-90 hover:brightness-100 cursor-pointer flex justify-center text-center">
-                    <a href='/resume.pdf' target="_blank" rel='noopener noreferrer'>
+                    <a href='https://drive.google.com/file/d/1VBvzeqrXttO3B7d5M_PoCGHCWgezYSJF/view?usp=sharing' target="_blank" rel='noopener noreferrer'>
                         <HoverBorderGradient
                             containerClassName="rounded-full"
                             as="button"
