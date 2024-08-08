@@ -15,7 +15,7 @@ export default function Skills() {
                     I&apos;m skilled in
                 </p>
                 <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
-                    most cloud, full stack and devops technologies.
+                    DevOps, Cloud and Full Stack Web technologies.
                 </p>
             </WavyBackground>
             <div

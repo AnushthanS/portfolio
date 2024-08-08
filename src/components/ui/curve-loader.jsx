@@ -50,7 +50,7 @@ export default function CurveLoader({children: ReactNode}) {
         setPath(initialCurve)
         setTimeout(() => {
             requestAnimationFrame(animate)
-        }, 500)
+        }, 100)
     }, [])
 
     return (
